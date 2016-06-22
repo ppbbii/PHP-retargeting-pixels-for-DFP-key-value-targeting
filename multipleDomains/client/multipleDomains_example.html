@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lorem Ipsum...</title>
+
+    <!-- Server-side cookie catcher - Important to call before cookieMuncher.js -->
+    <script src="//adserve.pl/CookieMonster/WorkingXDomain/rtgt.php"></script>
+    <!-- ENDOF: Server-side cookie catcher - Important to call before cookieMuncher.js -->
+
+    <!-- Start: example GPT Async -->
+    <script type='text/javascript'>
+        var gptadslots=[];
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function(){ var gads = document.createElement('script');
+            gads.async = true; gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        googletag.cmd.push(function() {
+
+            //Adslot 1 declaration
+            gptadslots[1]= googletag.defineSlot('/31695560/column_ad', [[300,250],[300,600],[120,600],[160,600],[300,1050]],'div-gpt-ad-719472824477613087-1').addService(googletag.pubads());
+
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableAsyncRendering();
+            googletag.enableServices();
+        });
+    </script>
+    <!-- End: example GPT -->
+
+        <!-- Client-side cookie reader -->
+        <script type="text/javascript" src="cookieMuncher.js"></script>
+        <!-- ENDOF: Client-side cookie reader -->
+
+</head>
+<body>
+    <article>
+        <h1>This implementation assumes you have a common domain shared across your inventory</h1>
+    </article>
+    <p>
+        <button onclick="exampleMARKER.markMe300x600();">Click me and <b>MARK</b> your session with 'example_300x600'</button>
+        <button onclick="exampleMARKER.unmarkMe300x600();">Click me and <b>UNMARK</b> your session with 'example_300x600'</button>
+    </p>
+    <p>
+        <button type="button" onclick="exampleMARKER.markMe160x600()">Click me and <b>MARK</b> your session with 'example_160x600'</button>
+        <button onclick="exampleMARKER.unmarkMe160x600();">Click me and <b>UNMARK</b> your session with 'example_160x600'</button>
+    </p>
+    <p>
+        <button onclick="document.getElementById('demo').innerHTML = exampleMARKER.ShowMyCookies();">Click me!</button>
+    </p>
+    <p id="demo" onclick="exampleMARKER.ShowMyCookies()">Click here to see cookie content</p>
+    <br>
+
+    <!-- Beginning Async AdSlot 1 for Ad unit column_ad  ### size: [[300,250],[300,600],[120,600],[160,600],[300,1050]] -->
+    <!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
+    <div id='div-gpt-ad-719472824477613087-1'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-719472824477613087-1'); });
+        </script>
+    </div>
+    <!-- End AdSlot 1 -->
+
+    <script>
+        // example call to server hosted on different domain - builds example profile for retargeting
+        // ttl [lifetime] - in days
+        // if ttl is negative - profile is removed
+        // any call to CookieCreator.php evaluates all the profiles.
+        // if profile lifetime is spent - it is removed and no longer stored
+
+        var exampleMARKER = exampleMARKER || {}
+        exampleMARKER = {
+                markMe300x600: function() {
+                (new Image()).src='//adserve.pl/CookieMonster/CookieCreator.php?id=example_300x600&ttl=1';
+            },
+                markMe160x600: function() {
+                (new Image()).src='//adserve.pl/CookieMonster/CookieCreator.php?id=example_160x600&ttl=1';
+            },
+                unmarkMe300x600: function() {
+                (new Image()).src='//adserve.pl/CookieMonster/CookieCreator.php?id=example_300x600&ttl=-1';
+            },
+                unmarkMe160x600: function() {
+                (new Image()).src='//adserve.pl/CookieMonster/CookieCreator.php?id=example_160x600&ttl=-1';
+            },
+            // helper function - visualises cookie content on the test page
+                ShowMyCookies: function() {
+                    cookieContent = Example.GetCookie(Example.NameMyCookie);
+                    return (cookieContent === "") ? "empty cookie" : cookieContent;
+            },
+        };
+    </script>
+
+</body>
+</html>
