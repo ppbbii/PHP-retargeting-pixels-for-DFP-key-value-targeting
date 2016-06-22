@@ -1,6 +1,5 @@
 Self-hosted PHP code / pixel for retargeting in DFP
 =========================
---------------------------------------------------------------------------------
 
 Repository with a PHP code that allows creation of custom audience segments based on self-hosted retargeting pixels
 
@@ -8,10 +7,11 @@ Two approaches - for publishers with one, common domain **[oneDomain]** and for 
 
 Most of the code is shared between the two.
 
-1. **CookieCreator.php** - server side code responsible for creating and managing a cookie
-2. **cookieMuncher.js** - client side code responsible for reading cookie and passing variables + setting targeting for DFP
-3. **multipleDomains_example & oneDomain_example [dot] html** - example integration with 300x600 and 160x600 ad formats
-4. **rtgt.php** - server-side code allowing to place cookie content set by CookieCreator on another domain, allowing to pass retargeting settings
+1. CookieCreator.php - server side code responsible for creating and managing a cookie.
+2. cookieMuncher.js - client side code responsible for reading cookie and passing variables + setting targeting for DFP.
+3. multipleDomains_example.html and oneDomain_example.html - example integration with 300x600 and 160x600 ad formats.
+4. rtgt.php - server-side code allowing to place cookie content set by CookieCreator on another domain, allowing to pass retargeting settings.
+
 --------------------------------------------------------------------------------
 
 ### Walkthrough, how to set up: ###
@@ -30,7 +30,6 @@ Most of the code is shared between the two.
 
 --------------------------------------------------------------------------------
 ### Example implementation - ad delivery: ###
-
 [Example website using **[oneDomain]** implementation](https://adserve.pl/CookieMonster/oneDomain_example.html) 
 
 [Example website using **[multipleDomains]** implementation](https://storage.googleapis.com/adpage/multipleDomains_example.html)
@@ -50,15 +49,11 @@ Good practise is to use only one ad format for each line item in inventory size 
 
 **Example** If you want to create line items targeted to
 ```
-#!
-
 retarget=example_160x600
 ```
 and 
 
 ```
-#!
-
 retarget=example_300x600
 ```
  
